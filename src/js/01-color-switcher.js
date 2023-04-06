@@ -3,12 +3,12 @@ const refs = {
     btnStop: document.querySelector('button[data-stop]'),
 };
 
-refs.btnStop.disable = true;
+refs.btnStop.disabled = true;
 let colorInterval = null;
 
 refs.btnStart.addEventListener('click', () => {
-    refs.btnStart = true;
-    refs.btnStop = false;
+    refs.btnStart.disabled = true;
+    refs.btnStop.disabled = false;
 
     colorInterval = setInterval(() => {
         document.body.style.background = getRandomHexColor();
@@ -17,8 +17,8 @@ refs.btnStart.addEventListener('click', () => {
 
 refs.btnStop.addEventListener('click', () =>{
     clearInterval(colorInterval);
-    refs.btnStart = false;
-    refs.btnStop = true;
+    refs.btnStart.disabled = false;
+    refs.btnStop.disabled = true;
 });
 
 function getRandomHexColor() {
