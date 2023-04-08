@@ -18,3 +18,36 @@ img {
   max-width: 100%;
 }
 
+.color-switcher {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+  margin-left: 630px;
+  
+}
+
+button:nth-child(1) {
+  margin-right:  30px;
+}
+button {
+  padding: 20px 30px;
+  text-transform: uppercase;
+  border-radius: 7px;
+  border: 1px solid #212121;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+}
+
+.field:not(:last-child) {
+  margin-right: 30px ;
+}
+
+.field {
+  font-weight: 700;
+  font-size: 40px;
+
+}
