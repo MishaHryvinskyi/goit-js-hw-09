@@ -10,7 +10,6 @@ body {
   background-color: #fafafa;
   color: #212121;
   line-height: 1.5;
-  
 }
 
 img {
@@ -24,12 +23,12 @@ img {
   justify-content: center;
   margin-top: 200px;
   margin-left: 630px;
-  
 }
 
 button:nth-child(1) {
   margin-right:  30px;
 }
+
 button {
   padding: 20px 30px;
   text-transform: uppercase;
@@ -37,10 +36,17 @@ button {
   border: 1px solid #212121;
 }
 
+button[type="submit"] {
+  padding: 6px 30px;
+  align-items: center;
+  text-transform: capitalize;
+}
+
 .position-input {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 input {
@@ -51,6 +57,12 @@ input {
   margin-right: 20px;
   border-radius: 7px;
   border: 1px solid #212121;
+}
+
+input[name="delay"],
+input[name="step"],
+input[name="amount"] {
+  height: 25px;
 }
 
 .timer {
@@ -66,4 +78,13 @@ input {
 .field {
   font-weight: 700;
   font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
