@@ -37,9 +37,26 @@ button {
   border: 1px solid #212121;
 }
 
+.position-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  height: 55px;
+  font-size: larger;
+  font-weight: 700;
+  text-align: center;
+  margin-right: 20px;
+  border-radius: 7px;
+  border: 1px solid #212121;
+}
+
 .timer {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .field:not(:last-child) {
@@ -49,5 +66,4 @@ button {
 .field {
   font-weight: 700;
   font-size: 40px;
-
 }
