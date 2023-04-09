@@ -74,6 +74,7 @@ refs.startBtn.addEventListener('click', () => {
     } else {
       Notiflix.Notify.success('Countdown finished');
       refs.timerMarkup.style.color = 'black'; 
+      clearInterval(timer); 
     }
     
     if (countdown === 0) {
