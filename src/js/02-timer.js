@@ -3,7 +3,7 @@ import "flatpickr/dist/flatpickr.min.css";
 import Notiflix from 'notiflix';
 
 
-refs = {
+const refs = {
 text: document.querySelector('#datetime-picker'),
 timerMarkup: document.querySelector('.timer'),
 startBtn: document.querySelector('button[data-start]'),
