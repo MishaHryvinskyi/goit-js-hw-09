@@ -76,5 +76,10 @@ refs.startBtn.addEventListener('click', () => {
       refs.timerMarkup.style.color = 'black'; 
       clearInterval(timer); 
     }
+    
+    if (countdown === 0) {
+      clearInterval(timer);
+    }
+
   }, 1000); 
 });
