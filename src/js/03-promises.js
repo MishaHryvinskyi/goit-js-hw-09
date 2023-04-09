@@ -18,7 +18,7 @@ function createPromise(delay) {
       } else {
         reject({ delay });
       }
-    }, delay);
+    }, refs.delay);
   });
 }
   
