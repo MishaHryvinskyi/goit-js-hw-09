@@ -12,13 +12,13 @@ function createPromise(delay) {
 
     setTimeout(() => {
       const shouldResolve = Math.random() > 0.3;
-
+      
       if (shouldResolve) {
         resolve({ delay });
       } else {
         reject({ delay });
       }
-    }, parseInt(refs.delay.value));
+    }, delay);
   });
 }
   
@@ -30,13 +30,13 @@ refs.btnPromises.addEventListener('click', evt => {
 
   for(let i = 0; i < refs.amount.value; i += 1) {
     createPromise(firstDelay + i * stepDelay)
-    .then((delay) => {
+    .then(({ delay }) => {
       const position = i + 1;
       Notiflix.Notify.success(
         `✅ Fulfilled promise ${position} in ${delay}ms`
       );
     })
-    .catch((delay ) => {
+    .catch(({ delay } ) => {
       const position = i + 1;
       Notiflix.Notify.failure(` Rejected promise ${position} in ${delay}ms`);
     });
