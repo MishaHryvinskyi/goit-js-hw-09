@@ -7,22 +7,19 @@ const refs = {
   btnPromises: document.querySelector('button[type="submit"]'),
 };
 
-function createPromise(position, delay) {
-
-  const promise = new Promise((resolve, reject) => {
+function createPromise(delay) {
+  return new Promise((resolve, reject) => {
 
     setTimeout(() => {
       const shouldResolve = Math.random() > 0.3;
 
       if (shouldResolve) {
-        resolve({ position, delay });
+        resolve({ delay });
       } else {
-        reject({ position, delay });
+        reject({ delay });
       }
     }, parseInt(refs.delay.value));
   });
-
-  return promise;
 }
   
 refs.btnPromises.addEventListener('click', evt => {
@@ -32,17 +29,17 @@ refs.btnPromises.addEventListener('click', evt => {
   let stepDelay = Number(refs.step.value);
 
   for(let i = 0; i < refs.amount.value; i += 1) {
-    createPromise(1 + i, firstDelay + i * stepDelay)
-    .then(({ position, delay }) => {
+    createPromise(firstDelay + i * stepDelay)
+    .then((delay) => {
+      const position = i + 1;
       Notiflix.Notify.success(
         `✅ Fulfilled promise ${position} in ${delay}ms`
       );
     })
-    .catch(({ position, delay }) => {
+    .catch((delay ) => {
+      const position = i + 1;
       Notiflix.Notify.failure(` Rejected promise ${position} in ${delay}ms`);
     });
   }
   refs.form.reset();
 });
-
-
