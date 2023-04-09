@@ -19,7 +19,7 @@ function createPromise(position, delay) {
       } else {
         reject({ position, delay });
       }
-    }, refs.delay);
+    }, parseInt(refs.delay.value));
   });
 
   return promise;
