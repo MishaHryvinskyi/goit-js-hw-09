@@ -14,7 +14,6 @@ days: document.querySelector('span[data-days]'),
 }
 
 refs.startBtn.disabled = true; 
-
 const options = {
   enableTime: true,
   time_24hr: true,

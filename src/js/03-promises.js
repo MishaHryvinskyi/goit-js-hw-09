@@ -42,7 +42,6 @@ refs.btnPromises.addEventListener('click', evt => {
       Notiflix.Notify.failure(` Rejected promise ${position} in ${delay}ms`);
     });
   }
-
   refs.form.reset();
 });
 
